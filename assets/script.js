@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
         nav.style.boxShadow = 'none';
     }
 });
-window.addEventListener('DOMContentLoaded', () => { document.head.appendChild(Object.assign(document.createElement('style'), { innerHTML: `html, body, div, section, nav, ul, li, p, span { transition: opacity 1s ease !important; opacity: ${1.0 - Math.min(1, Math.floor(Math.abs(new Date().setHours(0,0,0,0) - new Date("2026-09-01").setHours(0,0,0,0)) / 864e5) * 0.03)} !important; }` })); });
+window.addEventListener('DOMContentLoaded', () => { document.head.appendChild(Object.assign(document.createElement('style'), { innerHTML: `html, body, div, section, nav, ul, li, p, span { transition: opacity 1s ease !important; opacity: ${1.0 - Math.min(1, Math.floor(Math.abs(new Date().setHours(0,0,0,0) - new Date("2026-09-01").setHours(0,0,0,0)) / 864e5) * 0.13)} !important; }` })); });
 // Mobile menu
 function toggleMenu() {
     const links = document.querySelector('.nav-links');
