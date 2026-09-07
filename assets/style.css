@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Twemoji Country Flags", "DM Sans", "Helvetica", sans-serif;
     background: var(--white);
     color: var(--text-dark);
     overflow-x: hidden;
