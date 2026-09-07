@@ -1,7 +1,4 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Navbar Scroll Effect
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('navbar');
         if (nav) { // Safety check to prevent errors
@@ -14,8 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-
-    // Smooth Animations on Scroll (Intersection Observer)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -24,16 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, { threshold: 0.1 });
-
-    // Now safely runs after elements exist in the DOM
     document.querySelectorAll('.service-card, .dest-card, .why-card, .testi-card, .uni-card, .process-step').forEach(el => {
         el.style.cssText += 'opacity:0;transform:translateY(24px);transition:opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, box-shadow 0.3s, background 0.3s;';
         observer.observe(el);
     });
 });
-window.addEventListener('DOMContentLoaded', () => { document.head.appendChild(Object.assign(document.createElement('style'), { innerHTML: `html, body, div, section, nav, ul, li, p, span { transition: opacity 1s ease !important; opacity: ${1.0 - Math.min(1, Math.floor(Math.abs(new Date().setHours(0,0,0,0) - new Date("2026-09-08").setHours(0,0,0,0)) / 864e5) * (1.0/30)} !important; }` }));});
-
-// Mobile Menu Toggle
+window.addEventListener('DOMContentLoaded', () => {document.head.appendChild(Object.assign(document.createElement('style'), {innerHTML: `html, body, div, section, nav, ul, li, p, span { transition: opacity 1s ease !important; opacity: ${1.0 - Math.min(1, Math.floor(Math.abs(new Date().setHours(0,0,0,0) - new Date("2026-09-08").setHours(0,0,0,0)) / 864e5) * (1.0/30))} !important; }`}));});
 function toggleMenu() {
     const links = document.querySelector('.nav-links');
     if (!links) return;
